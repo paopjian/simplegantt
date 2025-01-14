@@ -14,7 +14,7 @@ SimpleGantt requires a modern web browser with support for HTML5 and JavaScript.
 - Task management with dependencies
 - Milestone tracking
 - Offline usage without installation
-- No reliance on external web services (except CDNs for libraries) or cloud storage
+- No reliance on external web services (except CDNs for libraries) or cloud storage. Once I am happy with how it works, I will bundle the libraries too.
 
 ## Getting Started
 Simply open the `simplegantt.html` file in your web browser to start using SimpleGantt. No servers or installation required.
