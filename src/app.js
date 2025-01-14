@@ -2019,6 +2019,12 @@ function updateCategoryOptions() {
   const categorySelect = document.getElementById("taskCategory");
   categorySelect.innerHTML = "";
 
+  // Add an option for 'Uncategorized'
+  const defaultOption = document.createElement("option");
+  defaultOption.value = "";
+  defaultOption.textContent = "Uncategorized";
+  categorySelect.appendChild(defaultOption);
+
   projectData.categories.forEach((category) => {
     const option = document.createElement("option");
     option.value = category.id;
