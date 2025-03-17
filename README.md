@@ -1,10 +1,27 @@
-# SimpleGantt
+这是一个fork项目, fork自 https://github.com/aerugo/simplegantt
 
-![Screenshot 2025-01-09 at 17 58 25](https://github.com/user-attachments/assets/c4f317b8-4b8d-4169-bc89-78fd2d02b5fe)
+# 简单甘特图
+这个项目在浏览器中运行, 需要浏览器支持HTML5和JavaScript, 需要从CDN下载第三方库.
+
+## 功能
+- 可交互甘特图
+- 任务可按依赖建立
+- 可跟踪里程碑
+- 离线使用
+- 不需要云存储或在线服务
+
+## 功能
+- **添加任务** 新建一个任务, 填写任务相关条目后在甘特图中中建立一条任务.
+- **里程碑** 新建一个标记, 填写里程碑相关条目后在特定日期建立一条标记.
+- **标签管理** 新建一条标签, 填写标签名后在项目中拥有该标签.
+- **人员管理** 添加项目人员, 填写人员名称后在项目中加入该人员.
+- **项目新建、加载与保存** 项目保存在.yaml文件, 可保存在本地, 或由项目解析后打开.
+
+
+# SimpleGantt
 
 SimpleGantt is a lightweight project management tool designed for environments where software installation is restricted and cloud web applications are not permitted. It runs entirely in the browser.
 
-[Try it live here](https://aerugo.github.io/simplegantt/simplegantt), data is saved locally.
 
 # Requirements
 SimpleGantt requires a modern web browser with support for HTML5 and JavaScript. It has been tested on the latest versions of Chrome, Firefox, and Edge. It also depends on a number of third-party libraries which are pulled in via CDN. See the `simplegantt.html` file for the list of dependencies.
@@ -20,22 +37,11 @@ SimpleGantt requires a modern web browser with support for HTML5 and JavaScript.
 Simply open the `simplegantt.html` file in your web browser to start using SimpleGantt. No servers or installation required.
 Project files are saved locally in .yaml format.
 
-## Using With SharePoint
-Many enterprise environments restrict the use of cloud-based project management tools. SimpleGantt can be used with SharePoint to provide a simple project management solution that is accessible across the organization in a restricted environment. To use SimpleGantt with SharePoint:
-1. Upload the repository files to a SharePoint document library.
-2. Rename `simplegantt.html` to `simplegantt.aspx`.
-
-SimpleGantt can now be accessed via the SharePoint document library. Saving and loading project files to SharePoint is usually restricted, and in these cases, users can save project files locally and manually upload them to SharePoint.
-
 ## Usage
 - **Creating Tasks**: Add new tasks with start dates, durations, and dependencies.
 - **Editing Tasks**: Modify task details and adjust timelines via drag-and-drop. Hold 'Shift' to enable changing task duration in the Gantt chart.
 - **Milestones**: Mark key events using milestones.
 - **Saving Projects**: Save your project data locally to avoid data loss.
-
-## Contributing
-Contributions are welcome, but support is limited. I don't have much time to spend on this project. 
-Please submit a pull request or open an issue for improvements and feature requests, but I may not be able to address them in the near future.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
