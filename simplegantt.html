@@ -4,24 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gantt Chart Application</title>
+    <!-- 日期选择组件 -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
+    <!-- yaml解析 -->
     <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-    <link
+    <!-- 字体文件 -->
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+    <!-- 文字图标组件 -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <!-- 标签展示组件的美化css -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
     />
-    <!-- Spectrum CSS -->
+    <!-- Adobe的样式 Spectrum CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css"
@@ -32,6 +37,7 @@
   <body>
     <header>
       <h1>
+        <!-- 顶部项目名 -->
         <span id="projectNameDisplay">Untitled Project</span>
         <input
           type="text"
@@ -42,6 +48,7 @@
         <button id="editProjectNameButton"><i class="fas fa-edit"></i></button>
       </h1>
       <nav>
+        <!-- 顶部导航栏,左侧:保存 另存为 按钮, 右侧: 加载 新项目 按钮 -->
         <div class="nav-left">
           <button id="saveProject"><i class="fas fa-save"></i> Save</button>
           <button id="saveAsProject">
@@ -81,6 +88,7 @@
             <i class="fas fa-expand"></i> Fullscreen
           </button>
         </div>
+        <!-- 左下角的缩放按钮点击后的两行 -->
         <!-- Zoom Controls moved here -->
         <div class="zoom-controls">
           <!-- Horizontal Zoom Controls -->
@@ -111,10 +119,14 @@
           </div>
         </div>
 
+        <!-- 标签多选搜索栏, 输入文本后有提示 -->
         <!-- Add a multi-select dropdown for category filtering -->
         <select id="categoryFilter" multiple></select>
+        <!-- 保存信息提示栏 -->
         <div id="statusMessage"></div>
+        <!-- 甘特图展示区域 -->
         <div id="ganttChart"></div>
+        <!-- 左下角缩放按钮 -->
         <button
           id="zoomToggleButton"
           class="zoom-toggle-button"
@@ -122,12 +134,13 @@
         >
           <i class="fas fa-search"></i>
         </button>
+        <!-- 全屏时右上角退出全屏按钮 -->
         <button id="exitFullscreenButton" class="exit-fullscreen-button">
           <i class="fas fa-compress"></i> Exit Fullscreen
         </button>
       </div>
     </main>
-
+    <!-- 任务弹窗 -->
     <div id="taskModal" class="modal">
       <div class="modal-content">
         <span class="close-button">&times;</span>
@@ -242,7 +255,7 @@
         </form>
       </div>
     </div>
-
+    <!-- 标签弹窗 -->
     <div id="categoriesModal" class="modal">
       <div class="modal-content">
         <span class="close-button">&times;</span>
@@ -279,7 +292,7 @@
         </div>
       </div>
     </div>
-
+    <!-- 任务详情弹窗 -->
     <div id="taskDetailsModal" class="modal">
       <div class="modal-content">
         <span class="close-button">&times;</span>
@@ -320,7 +333,7 @@
         </div>
       </div>
     </div>
-
+    <!-- 人员管理弹窗 -->
     <div id="peopleModal" class="modal">
       <div class="modal-content">
         <span class="close-button">&times;</span>
@@ -355,7 +368,7 @@
         </div>
       </div>
     </div>
-
+    <!-- 里程碑新建 弹窗 -->
     <!-- Milestone Modal -->
     <div id="milestoneModal" class="modal">
       <div class="modal-content">
@@ -405,7 +418,7 @@
         </form>
       </div>
     </div>
-
+    <!-- 里程碑详情 弹窗 -->
     <!-- Milestone Details Modal -->
     <div id="milestoneDetailsModal" class="modal">
       <div class="modal-content">
@@ -436,7 +449,7 @@
         </div>
       </div>
     </div>
-
+    <!-- 设置 弹窗 -->
     <div id="settingsModal" class="modal">
       <div class="modal-content">
         <span class="close-button">&times;</span>
@@ -470,7 +483,7 @@
     <!-- Include Sortable.js -->
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
     <script src="src/app.js"></script>
-
+    <!-- 页面底部文件状态弹窗 -->
     <!-- Status Bar -->
     <div id="statusBar">
       <span id="filePathDisplay">No file loaded.</span>
